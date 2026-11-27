@@ -19,6 +19,7 @@ library(leaflet)
 ```{r}
 #| include: false
 
+#reads in a dataset holding information on marriage rates
 marriage <- read.csv("C:/Users/cef22/OneDrive/Desktop/Claire2227.github.io/Marriage Rates by State_dfe_2019 2024.csv")
 
 marriage
@@ -27,6 +28,7 @@ marriage
 ```{r}
 #| include: false
 
+#provides an outline of the US with state boundaries
 us_states <- map_data("state")
 head(us_states)
 ```
@@ -40,10 +42,13 @@ This plot displays the marriage rate per 1,000 people for each state in the cont
 #| echo: false
 #| fig-cap: Static plot of the marriage rate per 1,000 people for each state in the contiguous US during the year 2024.
 
+#filters the marriage dataset to only include data from the year 2024 and makes the state names lowercase
 marriage <- marriage |>
   filter(YEAR == 2024) |>
   mutate(Location = str_to_lower(Location))
 
+#joins the marriage dataset with the us_states dataset by their respective names for states
+#creates a map of the states with states fill color corresponding to their marriage rates
 marriage |>
   right_join(us_states, by = c("Location" = "region")) |>
   ggplot(mapping = aes(x = long, y = lat, group = group)) + 
@@ -58,6 +63,7 @@ marriage |>
 ```{r}
 #| include: false
 
+#reads in a dataset holding information on divorce rates
 divorce <- read.csv("C:/Users/cef22/OneDrive/Desktop/Claire2227.github.io/Divorce Rates by State_dfe_2019 2024.csv")
 
 divorce
@@ -72,6 +78,8 @@ This plot displays states with a divorce rate of either above or below 2.5 per 1
 #| echo: false
 #| fig-cap: Static plot of states in the contiguous US with divorce rates above and below 2.5 per 1,000 people during the year 2024.
 
+#filters the divorce dataset to only include data from the year 2024 and makes the state names lowercase
+#creates two groups for the divorce dataset, one for states with a divorce rate greater than 2.5 and one for states with a divorce rate less than 2.5
 divorce <- divorce |>
   filter(YEAR == 2024) |>
   mutate(Location = str_to_lower(Location),
@@ -80,6 +88,8 @@ divorce <- divorce |>
                                  "Less than 2.5"))
 
 
+#joins the divorce dataset with the us_states dataset by their respective names for states
+#creates a map of the states with states fill color corresponding to either above or below a marriage rate of 2.5
 divorce |>
   right_join(us_states, by = c("Location" = "region")) |>
   ggplot(mapping = aes(x = long, y = lat, group = group)) + 
@@ -94,10 +104,13 @@ divorce |>
     scale_fill_manual(values = c("green", "pink"))
 ```
 
+## Interactive Plot of Marriage Rates
+
 ```{r}
 #| echo: false
 #| fig-cap: Interactive plot of the marriage rate per 1,000 people for each state in the contiguous US during the year 2024.
 
+#reads in an sf object containing geographic data on the US states
 states_sf <- 
   read_sf(
     "https://rstudio.github.io/leaflet/json/us-states.geojson"
@@ -105,21 +118,26 @@ states_sf <-
   select(name, geometry)
 #states_sf
 
+#changes all the state names to lowercase
 states_sf <- states_sf |>
   mutate(name = str_to_lower(name))
 
+#joins the marriage and states dataset by their respective name for their state column
 marriage_sf <- states_sf |>
   left_join(marriage, by = c("name" = "Location")) |>
   filter(!(name %in% c("alaska", "hawaii")))
 
+#creates intervals for the labels on the plot
 bins <- c(0, 2, 4, 6, 8, 10, 12, 14, Inf)
 pal <- colorBin("YlOrRd", domain = marriage_sf$Marriage.rate, bins = bins)
 
+#creates labels for each state that display the state name and marriage rate
 marriage_sf <- marriage_sf |>
   mutate(labels = str_c(name, ": ", Marriage.rate, "  per 1,000 people"))
 
 labels <- lapply(marriage_sf$labels, HTML)
 
+#creates an interactive plot of the US states with fill color for each state corresponding to its marriage rate and applying the labels created above
 leaflet(marriage_sf) |>
   setView(-96, 37.8, 4) |>
   addTiles() |>
@@ -141,14 +159,18 @@ leaflet(marriage_sf) |>
       style = list("font-weight" = "normal", padding = "3px 8px"),
       textsize = "15px",
       direction = "auto")) |>
-  addLegend(pal = pal, values = ~Marriage.rate, opacity = 0.7, title = NULL,
+  addLegend(pal = pal, values = ~Marriage.rate, opacity = 0.7, title = "Marriage Rate",
     position = "bottomright")
 ```
+
+## Interactive Plot of Divorce Rates
+
 
 ```{r}
 #| echo: false
 #| fig-cap: Interactive plot of states in the contiguous US with divorce rates above and below 2.5 per 1,000 people during the year 2024.
 
+#reads in an sf object containing geographic data on the US states
 states_sf <- 
   read_sf(
     "https://rstudio.github.io/leaflet/json/us-states.geojson"
@@ -156,14 +178,16 @@ states_sf <-
   select(name, geometry)
 #states_sf
 
+#changes all the state names to lowercase
 states_sf <- states_sf |>
   mutate(name = str_to_lower(name))
 
+#joins the divorce and states dataset by their respective name for their state column
 divorce_sf <- states_sf |>
   left_join(divorce, by = c("name" = "Location")) |>
   filter(!(name %in% c("alaska", "hawaii")))
 
-
+#creates labels for each state that display the state name and if their divorce rate is above or below 2.5
 divorce_sf <- divorce_sf |>
   mutate(labels = str_c(name, ": ", if_else(Divorce.rate > 2.5, 
                                  "Above 2.5 per 1,000 People", 
@@ -171,6 +195,7 @@ divorce_sf <- divorce_sf |>
 
 labels <- lapply(divorce_sf$labels, HTML)
 
+#assigns the two groups in divorce group to a different color
 levels(divorce_sf$divorce_group)
 factpal <- colorFactor(
   palette = c("green", "pink"),
@@ -178,6 +203,7 @@ factpal <- colorFactor(
   levels = levels(divorce_sf$divorce_group))
 
 
+#creates an interactive plot of the US states with fill color based on if the state has a divorce rate above or below 2.5 and applies the labels created above
 leaflet(divorce_sf) |>
   setView(-96, 37.8, 4) |>
   addTiles() |>
@@ -199,12 +225,13 @@ leaflet(divorce_sf) |>
       style = list("font-weight" = "normal", padding = "3px 8px"),
       textsize = "15px",
       direction = "auto")) |>
-  addLegend(pal = factpal, values = ~divorce_group, opacity = 0.7, title = NULL,
+  addLegend(pal = factpal, values = ~divorce_group, opacity = 0.7, title = "Divorce Rate",
     position = "bottomright")
 ```
 
 
 ## Sources
 [Source for Marriage Data](https://www.cdc.gov/nchs/state-stats/more-maps/marriage.html)
+
 [Source for Divorce Data](https://www.cdc.gov/nchs/state-stats/more-maps/divorce.html)
 
