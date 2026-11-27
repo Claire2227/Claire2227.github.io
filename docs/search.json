@@ -117,5 +117,12 @@
     "title": "Mini Project 1",
     "section": "Conclusion",
     "text": "Conclusion\nThe goal of this project was to analyze One Direction songs through methods such as sentiment analysis and tf-idf analysis. While working on the project, I found some results that were expected such as the most common words in One Direction songs appearing in the word cloud being romantically themed words. I also found some surprising results such as the number of negative words in One Direction songs far outweighing the number of positive words. Performing text analysis in this project provided insights on the lyrics and style of One Direction that I was not previously aware of and offered a glimpse into the lyrical breakdown of a popular and influential music group.\nLink to Code\nLink to Source"
+  },
+  {
+    "objectID": "maps.html#code",
+    "href": "maps.html#code",
+    "title": "Choropleth Maps",
+    "section": "Code",
+    "text": "Code\nLink to Code"
   }
 ]
