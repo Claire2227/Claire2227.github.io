@@ -8,7 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: mini_project_1.qmd
+        text: Mini Project 1
+      - href: maps.qmd
+        text: Choropleth Maps
 
 format:
   html:

@@ -1,0 +1,210 @@
+---
+title: "Choropleth Maps"
+format: html
+---
+
+```{r}
+#| include: false
+
+library(tidyverse)
+library(mdsr)
+library(maps)
+library(viridis)
+library(sf)
+library(htmltools)
+library(glue)
+library(leaflet)
+```
+
+```{r}
+#| include: false
+
+marriage <- read.csv("C:/Users/cef22/OneDrive/Desktop/Claire2227.github.io/Marriage Rates by State_dfe_2019 2024.csv")
+
+marriage
+```
+
+```{r}
+#| include: false
+
+us_states <- map_data("state")
+head(us_states)
+```
+
+## Static Plot of Marriage Rates
+
+This plot displays the marriage rate per 1,000 people for each state in the contiguous US during the year 2024. Marriages are counted in the state where the couple is married, not where the couple lives. Most states have marriage rates between 5 and 10. However, Nevada has a marriage rate of 24.8, reflecting the fact that Las Vegas is a popular destination to get married. Utah has the second highest marriage rate at 13.4
+
+
+```{r}
+#| echo: false
+#| fig-cap: Static plot of the marriage rate per 1,000 people for each state in the contiguous US during the year 2024.
+
+marriage <- marriage |>
+  filter(YEAR == 2024) |>
+  mutate(Location = str_to_lower(Location))
+
+marriage |>
+  right_join(us_states, by = c("Location" = "region")) |>
+  ggplot(mapping = aes(x = long, y = lat, group = group)) + 
+    geom_polygon(aes(fill = Marriage.rate), color = "black") + 
+    labs(fill = "Marriage Rate per 1,000 People") +
+    coord_map() +
+    theme_void() +
+    scale_fill_viridis()
+```
+
+
+```{r}
+#| include: false
+
+divorce <- read.csv("C:/Users/cef22/OneDrive/Desktop/Claire2227.github.io/Divorce Rates by State_dfe_2019 2024.csv")
+
+divorce
+```
+
+## Static Plot of Divorce Rates
+
+This plot displays states with a divorce rate of either above or below 2.5 per 1,000 people during the year 2024. Again, a divorce is counted in the state the marriage is legally ended. A majority of states have a divorce rate less than 2.5. However, the states with a divorce rate higher than 2.5 tend to be clustered in the south and west in a sort of diagonal line across the country. Additionally, some states have NA values where no divorce rate was found.
+
+
+```{r}
+#| echo: false
+#| fig-cap: Static plot of states in the contiguous US with divorce rates above and below 2.5 per 1,000 people during the year 2024.
+
+divorce <- divorce |>
+  filter(YEAR == 2024) |>
+  mutate(Location = str_to_lower(Location),
+         divorce_group = if_else(Divorce.rate > 2.5, 
+                                 "Above 2.5", 
+                                 "Less than 2.5"))
+
+
+divorce |>
+  right_join(us_states, by = c("Location" = "region")) |>
+  ggplot(mapping = aes(x = long, y = lat, group = group)) + 
+  geom_polygon(
+    aes(fill = divorce_group), 
+    color = "darkgrey", 
+    linewidth = 0.2
+  ) + 
+    labs(fill = "Divorce Rate Greater or Less Than 2.5 per 1,000 People") +
+    coord_map() + 
+    theme_void() +  
+    scale_fill_manual(values = c("green", "pink"))
+```
+
+```{r}
+#| echo: false
+#| fig-cap: Interactive plot of the marriage rate per 1,000 people for each state in the contiguous US during the year 2024.
+
+states_sf <- 
+  read_sf(
+    "https://rstudio.github.io/leaflet/json/us-states.geojson"
+  ) |>
+  select(name, geometry)
+#states_sf
+
+states_sf <- states_sf |>
+  mutate(name = str_to_lower(name))
+
+marriage_sf <- states_sf |>
+  left_join(marriage, by = c("name" = "Location")) |>
+  filter(!(name %in% c("alaska", "hawaii")))
+
+bins <- c(0, 2, 4, 6, 8, 10, 12, 14, Inf)
+pal <- colorBin("YlOrRd", domain = marriage_sf$Marriage.rate, bins = bins)
+
+marriage_sf <- marriage_sf |>
+  mutate(labels = str_c(name, ": ", Marriage.rate, "  per 1,000 people"))
+
+labels <- lapply(marriage_sf$labels, HTML)
+
+leaflet(marriage_sf) |>
+  setView(-96, 37.8, 4) |>
+  addTiles() |>
+  addPolygons(
+    fillColor = ~pal(Marriage.rate),
+    weight = 2,
+    opacity = 1,
+    color = "white",
+    dashArray = "3",
+    fillOpacity = 0.7,
+    highlightOptions = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE),
+    label = labels,
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "15px",
+      direction = "auto")) |>
+  addLegend(pal = pal, values = ~Marriage.rate, opacity = 0.7, title = NULL,
+    position = "bottomright")
+```
+
+```{r}
+#| echo: false
+#| fig-cap: Interactive plot of states in the contiguous US with divorce rates above and below 2.5 per 1,000 people during the year 2024.
+
+states_sf <- 
+  read_sf(
+    "https://rstudio.github.io/leaflet/json/us-states.geojson"
+  ) |>
+  select(name, geometry)
+#states_sf
+
+states_sf <- states_sf |>
+  mutate(name = str_to_lower(name))
+
+divorce_sf <- states_sf |>
+  left_join(divorce, by = c("name" = "Location")) |>
+  filter(!(name %in% c("alaska", "hawaii")))
+
+
+divorce_sf <- divorce_sf |>
+  mutate(labels = str_c(name, ": ", if_else(Divorce.rate > 2.5, 
+                                 "Above 2.5 per 1,000 People", 
+                                 "Less than 2.5 per 1,000 People")))
+
+labels <- lapply(divorce_sf$labels, HTML)
+
+levels(divorce_sf$divorce_group)
+factpal <- colorFactor(
+  palette = c("green", "pink"),
+  domain = divorce_sf$divorce_group,
+  levels = levels(divorce_sf$divorce_group))
+
+
+leaflet(divorce_sf) |>
+  setView(-96, 37.8, 4) |>
+  addTiles() |>
+  addPolygons(
+    fillColor = ~factpal(divorce_group),
+    weight = 2,
+    opacity = 1,
+    color = "white",
+    dashArray = "3",
+    fillOpacity = 0.7,
+    highlightOptions = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE),
+    label = labels,
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "15px",
+      direction = "auto")) |>
+  addLegend(pal = factpal, values = ~divorce_group, opacity = 0.7, title = NULL,
+    position = "bottomright")
+```
+
+
+## Sources
+[Source for Marriage Data](https://www.cdc.gov/nchs/state-stats/more-maps/marriage.html)
+[Source for Divorce Data](https://www.cdc.gov/nchs/state-stats/more-maps/divorce.html)
+

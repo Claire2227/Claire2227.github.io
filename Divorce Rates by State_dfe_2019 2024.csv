@@ -1,0 +1,307 @@
+YEAR,Location,Divorce rate,URL
+2024,Alabama,2.9,/nchs/state-stats/states/al.html
+2024,Alaska,3.1,/nchs/state-stats/states/ak.html
+2024,Arizona,2.1,/nchs/state-stats/states/az.html
+2024,Arkansas,3.3,/nchs/state-stats/states/ar.html
+2024,California,,/nchs/state-stats/states/ca.html
+2024,Colorado,2.9,/nchs/state-stats/states/co.html
+2024,Connecticut,2.5,/nchs/state-stats/states/ct.html
+2024,Delaware,2.4,/nchs/state-stats/states/de.html
+2024,District of Columbia,2.1,/nchs/state-stats/states/dc.html
+2024,Florida,2.8,/nchs/state-stats/states/fl.html
+2024,Georgia,2.2,/nchs/state-stats/states/ga.html
+2024,Hawaii,,/nchs/state-stats/states/hi.html
+2024,Idaho,3.2,/nchs/state-stats/states/id.html
+2024,Illinois,1.3,/nchs/state-stats/states/il.html
+2024,Indiana,,/nchs/state-stats/states/in.html
+2024,Iowa,1.8,/nchs/state-stats/states/ia.html
+2024,Kansas,1.7,/nchs/state-stats/states/ks.html
+2024,Kentucky,2.9,/nchs/state-stats/states/ky.html
+2024,Louisiana,0.8,/nchs/state-stats/states/la.html
+2024,Maine,2.5,/nchs/state-stats/states/me.html
+2024,Maryland,2.8,/nchs/state-stats/states/md.html
+2024,Massachusetts,1.5,/nchs/state-stats/states/ma.html
+2024,Michigan,2.2,/nchs/state-stats/states/mi.html
+2024,Minnesota,,/nchs/state-stats/states/mn.html
+2024,Mississippi,2.7,/nchs/state-stats/states/ms.html
+2024,Missouri,2.4,/nchs/state-stats/states/mo.html
+2024,Montana,1.9,/nchs/state-stats/states/mt.html
+2024,Nebraska,2.4,/nchs/state-stats/states/ne.html
+2024,Nevada,3.8,/nchs/state-stats/states/nv.html
+2024,New Hampshire,2.5,/nchs/state-stats/states/nh.html
+2024,New Jersey,2.3,/nchs/state-stats/states/nj.html
+2024,New Mexico,,/nchs/state-stats/states/nm.html
+2024,New York,2.3,/nchs/state-stats/states/ny.html
+2024,North Carolina,2.5,/nchs/state-stats/states/nc.html
+2024,North Dakota,2.6,/nchs/state-stats/states/nd.html
+2024,Ohio,2.3,/nchs/state-stats/states/oh.html
+2024,Oklahoma,3.3,/nchs/state-stats/states/ok.html
+2024,Oregon,2.8,/nchs/state-stats/states/or.html
+2024,Pennsylvania,2.1,/nchs/state-stats/states/pa.html
+2024,Rhode Island,2.3,/nchs/state-stats/states/ri.html
+2024,South Carolina,2.2,/nchs/state-stats/states/sc.html
+2024,South Dakota,2.3,/nchs/state-stats/states/sd.html
+2024,Tennessee,2.7,/nchs/state-stats/states/tn.html
+2024,Texas,1.9,/nchs/state-stats/states/tx.html
+2024,Utah,3,/nchs/state-stats/states/ut.html
+2024,Vermont,2.3,/nchs/state-stats/states/vt.html
+2024,Virginia,2.6,/nchs/state-stats/states/va.html
+2024,Washington,2.5,/nchs/state-stats/states/wa.html
+2024,West Virginia,2.8,/nchs/state-stats/states/wv.html
+2024,Wisconsin,2,/nchs/state-stats/states/wi.html
+2024,Wyoming,3.2,/nchs/state-stats/states/wy.html
+2023,Alabama,3,/nchs/state-stats/states/al.html
+2023,Alaska,3.1,/nchs/state-stats/states/ak.html
+2023,Arizona,2,/nchs/state-stats/states/az.html
+2023,Arkansas,3,/nchs/state-stats/states/ar.html
+2023,California,,/nchs/state-stats/states/ca.html
+2023,Colorado,2.8,/nchs/state-stats/states/co.html
+2023,Connecticut,2.6,/nchs/state-stats/states/ct.html
+2023,Delaware,2.6,/nchs/state-stats/states/de.html
+2023,District of Columbia,1.9,/nchs/state-stats/states/dc.html
+2023,Florida,3,/nchs/state-stats/states/fl.html
+2023,Georgia,2.2,/nchs/state-stats/states/ga.html
+2023,Hawaii,,/nchs/state-stats/states/hi.html
+2023,Idaho,3.4,/nchs/state-stats/states/id.html
+2023,Illinois,1.2,/nchs/state-stats/states/il.html
+2023,Indiana,,/nchs/state-stats/states/in.html
+2023,Iowa,1.9,/nchs/state-stats/states/ia.html
+2023,Kansas,1.7,/nchs/state-stats/states/ks.html
+2023,Kentucky,2.9,/nchs/state-stats/states/ky.html
+2023,Louisiana,0.9,/nchs/state-stats/states/la.html
+2023,Maine,2.5,/nchs/state-stats/states/me.html
+2023,Maryland,2.7,/nchs/state-stats/states/md.html
+2023,Massachusetts,1.8,/nchs/state-stats/states/ma.html
+2023,Michigan,2.2,/nchs/state-stats/states/mi.html
+2023,Minnesota,,/nchs/state-stats/states/mn.html
+2023,Mississippi,2.9,/nchs/state-stats/states/ms.html
+2023,Missouri,2.6,/nchs/state-stats/states/mo.html
+2023,Montana,2.3,/nchs/state-stats/states/mt.html
+2023,Nebraska,2.6,/nchs/state-stats/states/ne.html
+2023,Nevada,3.8,/nchs/state-stats/states/nv.html
+2023,New Hampshire,2.5,/nchs/state-stats/states/nh.html
+2023,New Jersey,2.2,/nchs/state-stats/states/nj.html
+2023,New Mexico,,/nchs/state-stats/states/nm.html
+2023,New York,2.4,/nchs/state-stats/states/ny.html
+2023,North Carolina,2.7,/nchs/state-stats/states/nc.html
+2023,North Dakota,2.6,/nchs/state-stats/states/nd.html
+2023,Ohio,2.4,/nchs/state-stats/states/oh.html
+2023,Oklahoma,3.3,/nchs/state-stats/states/ok.html
+2023,Oregon,2.8,/nchs/state-stats/states/or.html
+2023,Pennsylvania,2.2,/nchs/state-stats/states/pa.html
+2023,Rhode Island,2.3,/nchs/state-stats/states/ri.html
+2023,South Carolina,2.2,/nchs/state-stats/states/sc.html
+2023,South Dakota,2.3,/nchs/state-stats/states/sd.html
+2023,Tennessee,2.9,/nchs/state-stats/states/tn.html
+2023,Texas,2.1,/nchs/state-stats/states/tx.html
+2023,Utah,3.1,/nchs/state-stats/states/ut.html
+2023,Vermont,2.4,/nchs/state-stats/states/vt.html
+2023,Virginia,2.7,/nchs/state-stats/states/va.html
+2023,Washington,2.7,/nchs/state-stats/states/wa.html
+2023,West Virginia,2.9,/nchs/state-stats/states/wv.html
+2023,Wisconsin,2.1,/nchs/state-stats/states/wi.html
+2023,Wyoming,3.4,/nchs/state-stats/states/wy.html
+2022,Alabama,3.2,/nchs/state-stats/states/al.html
+2022,Alaska,3,/nchs/state-stats/states/ak.html
+2022,Arizona,2.3,/nchs/state-stats/states/az.html
+2022,Arkansas,3.5,/nchs/state-stats/states/ar.html
+2022,California,,/nchs/state-stats/states/ca.html
+2022,Colorado,2.9,/nchs/state-stats/states/co.html
+2022,Connecticut,2.8,/nchs/state-stats/states/ct.html
+2022,Delaware,2.3,/nchs/state-stats/states/de.html
+2022,District of Columbia,2,/nchs/state-stats/states/dc.html
+2022,Florida,3.1,/nchs/state-stats/states/fl.html
+2022,Georgia,2.1,/nchs/state-stats/states/ga.html
+2022,Hawaii,,/nchs/state-stats/states/hi.html
+2022,Idaho,3.3,/nchs/state-stats/states/id.html
+2022,Illinois,1.1,/nchs/state-stats/states/il.html
+2022,Indiana,,/nchs/state-stats/states/in.html
+2022,Iowa,2,/nchs/state-stats/states/ia.html
+2022,Kansas,1.9,/nchs/state-stats/states/ks.html
+2022,Kentucky,3,/nchs/state-stats/states/ky.html
+2022,Louisiana,0.7,/nchs/state-stats/states/la.html
+2022,Maine,2.4,/nchs/state-stats/states/me.html
+2022,Maryland,2.6,/nchs/state-stats/states/md.html
+2022,Massachusetts,1.4,/nchs/state-stats/states/ma.html
+2022,Michigan,2.3,/nchs/state-stats/states/mi.html
+2022,Minnesota,,/nchs/state-stats/states/mn.html
+2022,Mississippi,3,/nchs/state-stats/states/ms.html
+2022,Missouri,2.7,/nchs/state-stats/states/mo.html
+2022,Montana,2,/nchs/state-stats/states/mt.html
+2022,Nebraska,2.6,/nchs/state-stats/states/ne.html
+2022,Nevada,4.2,/nchs/state-stats/states/nv.html
+2022,New Hampshire,2.5,/nchs/state-stats/states/nh.html
+2022,New Jersey,2.3,/nchs/state-stats/states/nj.html
+2022,New Mexico,,/nchs/state-stats/states/nm.html
+2022,New York,2.3,/nchs/state-stats/states/ny.html
+2022,North Carolina,2.7,/nchs/state-stats/states/nc.html
+2022,North Dakota,2.7,/nchs/state-stats/states/nd.html
+2022,Ohio,2.4,/nchs/state-stats/states/oh.html
+2022,Oklahoma,3.7,/nchs/state-stats/states/ok.html
+2022,Oregon,2.8,/nchs/state-stats/states/or.html
+2022,Pennsylvania,2.2,/nchs/state-stats/states/pa.html
+2022,Rhode Island,2.4,/nchs/state-stats/states/ri.html
+2022,South Carolina,2.4,/nchs/state-stats/states/sc.html
+2022,South Dakota,2.3,/nchs/state-stats/states/sd.html
+2022,Tennessee,3,/nchs/state-stats/states/tn.html
+2022,Texas,1.9,/nchs/state-stats/states/tx.html
+2022,Utah,2.9,/nchs/state-stats/states/ut.html
+2022,Vermont,2.3,/nchs/state-stats/states/vt.html
+2022,Virginia,2.9,/nchs/state-stats/states/va.html
+2022,Washington,2.8,/nchs/state-stats/states/wa.html
+2022,West Virginia,3.2,/nchs/state-stats/states/wv.html
+2022,Wisconsin,2.1,/nchs/state-stats/states/wi.html
+2022,Wyoming,3.3,/nchs/state-stats/states/wy.html
+2021,Alabama,3.6,/nchs/state-stats/states/al.html
+2021,Alaska,3.1,/nchs/state-stats/states/ak.html
+2021,Arizona,2.7,/nchs/state-stats/states/az.html
+2021,Arkansas,3.6,/nchs/state-stats/states/ar.html
+2021,California,,/nchs/state-stats/states/ca.html
+2021,Colorado,3,/nchs/state-stats/states/co.html
+2021,Connecticut,2.5,/nchs/state-stats/states/ct.html
+2021,Delaware,2.6,/nchs/state-stats/states/de.html
+2021,District of Columbia,2.6,/nchs/state-stats/states/dc.html
+2021,Florida,3.4,/nchs/state-stats/states/fl.html
+2021,Georgia,2.2,/nchs/state-stats/states/ga.html
+2021,Hawaii,,/nchs/state-stats/states/hi.html
+2021,Idaho,3.4,/nchs/state-stats/states/id.html
+2021,Illinois,1.3,/nchs/state-stats/states/il.html
+2021,Indiana,,/nchs/state-stats/states/in.html
+2021,Iowa,2.3,/nchs/state-stats/states/ia.html
+2021,Kansas,1.9,/nchs/state-stats/states/ks.html
+2021,Kentucky,3.3,/nchs/state-stats/states/ky.html
+2021,Louisiana,2.2,/nchs/state-stats/states/la.html
+2021,Maine,2.7,/nchs/state-stats/states/me.html
+2021,Maryland,2.6,/nchs/state-stats/states/md.html
+2021,Massachusetts,1,/nchs/state-stats/states/ma.html
+2021,Michigan,2.3,/nchs/state-stats/states/mi.html
+2021,Minnesota,,/nchs/state-stats/states/mn.html
+2021,Mississippi,3.3,/nchs/state-stats/states/ms.html
+2021,Missouri,2.9,/nchs/state-stats/states/mo.html
+2021,Montana,2.5,/nchs/state-stats/states/mt.html
+2021,Nebraska,2.6,/nchs/state-stats/states/ne.html
+2021,Nevada,4.2,/nchs/state-stats/states/nv.html
+2021,New Hampshire,2.6,/nchs/state-stats/states/nh.html
+2021,New Jersey,2.2,/nchs/state-stats/states/nj.html
+2021,New Mexico,,/nchs/state-stats/states/nm.html
+2021,New York,2.2,/nchs/state-stats/states/ny.html
+2021,North Carolina,3.2,/nchs/state-stats/states/nc.html
+2021,North Dakota,2.9,/nchs/state-stats/states/nd.html
+2021,Ohio,2.6,/nchs/state-stats/states/oh.html
+2021,Oklahoma,3.8,/nchs/state-stats/states/ok.html
+2021,Oregon,2.7,/nchs/state-stats/states/or.html
+2021,Pennsylvania,2.4,/nchs/state-stats/states/pa.html
+2021,Rhode Island,2.7,/nchs/state-stats/states/ri.html
+2021,South Carolina,2.4,/nchs/state-stats/states/sc.html
+2021,South Dakota,2.5,/nchs/state-stats/states/sd.html
+2021,Tennessee,3.3,/nchs/state-stats/states/tn.html
+2021,Texas,1.4,/nchs/state-stats/states/tx.html
+2021,Utah,3.3,/nchs/state-stats/states/ut.html
+2021,Vermont,2.3,/nchs/state-stats/states/vt.html
+2021,Virginia,3.1,/nchs/state-stats/states/va.html
+2021,Washington,2.9,/nchs/state-stats/states/wa.html
+2021,West Virginia,2.9,/nchs/state-stats/states/wv.html
+2021,Wisconsin,2.1,/nchs/state-stats/states/wi.html
+2021,Wyoming,3.7,/nchs/state-stats/states/wy.html
+2020,Alabama,3.7,/nchs/state-stats/states/al.html
+2020,Alaska,3.2,/nchs/state-stats/states/ak.html
+2020,Arizona,2.9,/nchs/state-stats/states/az.html
+2020,Arkansas,3.6,/nchs/state-stats/states/ar.html
+2020,California,,/nchs/state-stats/states/ca.html
+2020,Colorado,2.9,/nchs/state-stats/states/co.html
+2020,Connecticut,1.6,/nchs/state-stats/states/ct.html
+2020,Delaware,2.3,/nchs/state-stats/states/de.html
+2020,District of Columbia,2.1,/nchs/state-stats/states/dc.html
+2020,Florida,3,/nchs/state-stats/states/fl.html
+2020,Georgia,1.9,/nchs/state-stats/states/ga.html
+2020,Hawaii,,/nchs/state-stats/states/hi.html
+2020,Idaho,3.4,/nchs/state-stats/states/id.html
+2020,Illinois,1.6,/nchs/state-stats/states/il.html
+2020,Indiana,,/nchs/state-stats/states/in.html
+2020,Iowa,2.1,/nchs/state-stats/states/ia.html
+2020,Kansas,1.8,/nchs/state-stats/states/ks.html
+2020,Kentucky,3.1,/nchs/state-stats/states/ky.html
+2020,Louisiana,1.4,/nchs/state-stats/states/la.html
+2020,Maine,2.4,/nchs/state-stats/states/me.html
+2020,Maryland,1.7,/nchs/state-stats/states/md.html
+2020,Massachusetts,1,/nchs/state-stats/states/ma.html
+2020,Michigan,2.1,/nchs/state-stats/states/mi.html
+2020,Minnesota,,/nchs/state-stats/states/mn.html
+2020,Mississippi,3.3,/nchs/state-stats/states/ms.html
+2020,Missouri,2.7,/nchs/state-stats/states/mo.html
+2020,Montana,2.3,/nchs/state-stats/states/mt.html
+2020,Nebraska,2.8,/nchs/state-stats/states/ne.html
+2020,Nevada,3,/nchs/state-stats/states/nv.html
+2020,New Hampshire,2.4,/nchs/state-stats/states/nh.html
+2020,New Jersey,1.7,/nchs/state-stats/states/nj.html
+2020,New Mexico,,/nchs/state-stats/states/nm.html
+2020,New York,1.8,/nchs/state-stats/states/ny.html
+2020,North Carolina,2.8,/nchs/state-stats/states/nc.html
+2020,North Dakota,2.4,/nchs/state-stats/states/nd.html
+2020,Ohio,2.5,/nchs/state-stats/states/oh.html
+2020,Oklahoma,3.5,/nchs/state-stats/states/ok.html
+2020,Oregon,2.6,/nchs/state-stats/states/or.html
+2020,Pennsylvania,2.3,/nchs/state-stats/states/pa.html
+2020,Rhode Island,1.9,/nchs/state-stats/states/ri.html
+2020,South Carolina,2,/nchs/state-stats/states/sc.html
+2020,South Dakota,2.5,/nchs/state-stats/states/sd.html
+2020,Tennessee,3.2,/nchs/state-stats/states/tn.html
+2020,Texas,1.5,/nchs/state-stats/states/tx.html
+2020,Utah,3.3,/nchs/state-stats/states/ut.html
+2020,Vermont,2.1,/nchs/state-stats/states/vt.html
+2020,Virginia,2.6,/nchs/state-stats/states/va.html
+2020,Washington,2.8,/nchs/state-stats/states/wa.html
+2020,West Virginia,3.1,/nchs/state-stats/states/wv.html
+2020,Wisconsin,2,/nchs/state-stats/states/wi.html
+2020,Wyoming,3.8,/nchs/state-stats/states/wy.html
+2019,Alabama,3.6,/nchs/state-stats/states/al.html
+2019,Alaska,3.6,/nchs/state-stats/states/ak.html
+2019,Arizona,2.9,/nchs/state-stats/states/az.html
+2019,Arkansas,4,/nchs/state-stats/states/ar.html
+2019,California,,/nchs/state-stats/states/ca.html
+2019,Colorado,3.3,/nchs/state-stats/states/co.html
+2019,Connecticut,2.7,/nchs/state-stats/states/ct.html
+2019,Delaware,2.9,/nchs/state-stats/states/de.html
+2019,District of Columbia,2.4,/nchs/state-stats/states/dc.html
+2019,Florida,3.5,/nchs/state-stats/states/fl.html
+2019,Georgia,2.3,/nchs/state-stats/states/ga.html
+2019,Hawaii,,/nchs/state-stats/states/hi.html
+2019,Idaho,3.9,/nchs/state-stats/states/id.html
+2019,Illinois,1.3,/nchs/state-stats/states/il.html
+2019,Indiana,,/nchs/state-stats/states/in.html
+2019,Iowa,2.3,/nchs/state-stats/states/ia.html
+2019,Kansas,2.3,/nchs/state-stats/states/ks.html
+2019,Kentucky,3.4,/nchs/state-stats/states/ky.html
+2019,Louisiana,2.4,/nchs/state-stats/states/la.html
+2019,Maine,3,/nchs/state-stats/states/me.html
+2019,Maryland,2.7,/nchs/state-stats/states/md.html
+2019,Massachusetts,1.5,/nchs/state-stats/states/ma.html
+2019,Michigan,2.3,/nchs/state-stats/states/mi.html
+2019,Minnesota,,/nchs/state-stats/states/mn.html
+2019,Mississippi,2.6,/nchs/state-stats/states/ms.html
+2019,Missouri,2.9,/nchs/state-stats/states/mo.html
+2019,Montana,3,/nchs/state-stats/states/mt.html
+2019,Nebraska,2.7,/nchs/state-stats/states/ne.html
+2019,Nevada,4.2,/nchs/state-stats/states/nv.html
+2019,New Hampshire,3.1,/nchs/state-stats/states/nh.html
+2019,New Jersey,2.5,/nchs/state-stats/states/nj.html
+2019,New Mexico,,/nchs/state-stats/states/nm.html
+2019,New York,2.9,/nchs/state-stats/states/ny.html
+2019,North Carolina,3.1,/nchs/state-stats/states/nc.html
+2019,North Dakota,2.5,/nchs/state-stats/states/nd.html
+2019,Ohio,2.8,/nchs/state-stats/states/oh.html
+2019,Oklahoma,3.9,/nchs/state-stats/states/ok.html
+2019,Oregon,3.2,/nchs/state-stats/states/or.html
+2019,Pennsylvania,2.6,/nchs/state-stats/states/pa.html
+2019,Rhode Island,2.7,/nchs/state-stats/states/ri.html
+2019,South Carolina,2.6,/nchs/state-stats/states/sc.html
+2019,South Dakota,2.6,/nchs/state-stats/states/sd.html
+2019,Tennessee,3.5,/nchs/state-stats/states/tn.html
+2019,Texas,2.1,/nchs/state-stats/states/tx.html
+2019,Utah,3.5,/nchs/state-stats/states/ut.html
+2019,Vermont,2.8,/nchs/state-stats/states/vt.html
+2019,Virginia,2.9,/nchs/state-stats/states/va.html
+2019,Washington,2.8,/nchs/state-stats/states/wa.html
+2019,West Virginia,3.6,/nchs/state-stats/states/wv.html
+2019,Wisconsin,2.3,/nchs/state-stats/states/wi.html
+2019,Wyoming,3.8,/nchs/state-stats/states/wy.html

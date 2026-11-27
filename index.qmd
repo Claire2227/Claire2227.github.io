@@ -1,11 +1,21 @@
 ---
-title: "Claire2227.github.io"
+title: "Claire Faulkner"
+image: profile.jpg
+about:
+  template: jolla
+  image-width: 10em
+  image-shape: rounded
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+:::{#hero-heading}
 
-```{r}
-1 + 1
-```
+Hi! My name is Claire Faulkner. I am from Mahtomedi, Minnesota. I am a junior at St. Olaf College and am majoring in Mathematics, Statistics and Data Science, and Quantitative Economics. I also play on St. Olaf's Soccer Team. 
+
+## Education
+
+St. Olaf College | Northfield, MN | 
+Mathematics, Statistics and Data Science, and Quantitative Economics Major | Sept 2024 - May 2028
+
+
+:::
